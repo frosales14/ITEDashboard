@@ -1,4 +1,4 @@
 <div class="flex h-screen bg-gray-50 dark:bg-gray-900">
-  <app-side-bar />
-  <app-navbar class="w-full" />
+  <app-side-bar [showSidebar]="showSidebar()" />
+  <app-navbar class="w-full" (menuBtnClick)="onMenuBtnClick()" />
 </div>

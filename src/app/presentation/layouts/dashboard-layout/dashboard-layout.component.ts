@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { SideBarComponent } from '../side-bar/side-bar.component';
 
@@ -10,6 +10,11 @@ import { SideBarComponent } from '../side-bar/side-bar.component';
   styles: `
 
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DashboardLayoutComponent {}
+export class DashboardLayoutComponent {
+  public showSidebar = signal<boolean>(false);
+
+  public onMenuBtnClick() {
+    this.showSidebar.update((show) => !show);
+  }
+}

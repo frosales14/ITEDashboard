@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { SidebarMenuComponent } from '../sidebar-menu/sidebar-menu.component';
 
 @Component({
@@ -9,6 +9,7 @@ import { SidebarMenuComponent } from '../sidebar-menu/sidebar-menu.component';
   templateUrl: './side-bar.component.html',
   styles: `
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SideBarComponent {}
+export class SideBarComponent {
+  public showSidebar = input.required<boolean>();
+}

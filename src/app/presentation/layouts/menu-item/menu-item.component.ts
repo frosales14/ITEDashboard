@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MenuItem } from 'app/models/interfaces/menu.interface';
 
@@ -13,7 +13,6 @@ import { MenuItem } from 'app/models/interfaces/menu.interface';
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuItemComponent {
   menuItems = input.required<MenuItem[]>();

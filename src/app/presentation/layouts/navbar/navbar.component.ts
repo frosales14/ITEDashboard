@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -11,8 +11,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
-  showProfileMenu = false;
+  public menuBtnClick = output<void>();
+  public showProfileMenu = false;
 }
