@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { MenuItemComponent } from '../menu-item/menu-item.component';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar-menu',
   standalone: true,
-  imports: [MenuItemComponent, RouterLink],
+  imports: [MenuItemComponent, RouterLink, RouterLinkActive],
   templateUrl: './sidebar-menu.component.html',
   styles: `
     :host {

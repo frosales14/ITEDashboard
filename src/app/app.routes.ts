@@ -9,43 +9,42 @@ import { campaingRoutes } from './presentation/features/campaign/campaing.routes
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'login',
     loadChildren: () =>
       import('./presentation/features/auth/auth.routes').then((r) => r.routes),
   },
   {
-    path: 'dashboard',
+    path: '',
     component: DashboardLayoutComponent,
-    children: dashboardRoutes,
-  },
-  {
-    path: 'users',
-    component: DashboardLayoutComponent,
-    children: userRoutes,
-  },
-  {
-    path: 'storage-rooms',
-    component: DashboardLayoutComponent,
-    children: userRoutes,
-  },
-  {
-    path: 'categories',
-    component: DashboardLayoutComponent,
-    children: categoryRoutes,
-  },
-  {
-    path: 'products',
-    component: DashboardLayoutComponent,
-    children: productRoutes,
-  },
-  {
-    path: 'campaigns',
-    component: DashboardLayoutComponent,
-    children: campaingRoutes,
-  },
-  {
-    path: 'stations',
-    component: DashboardLayoutComponent,
-    children: stationRoutes,
+    children: [
+      {
+        path: 'dashboard',
+        children: dashboardRoutes,
+      },
+      {
+        path: 'users',
+        children: userRoutes,
+      },
+      {
+        path: 'storage-rooms',
+        children: userRoutes,
+      },
+      {
+        path: 'categories',
+        children: categoryRoutes,
+      },
+      {
+        path: 'products',
+        children: productRoutes,
+      },
+      {
+        path: 'campaigns',
+        children: campaingRoutes,
+      },
+      {
+        path: 'stations',
+        children: stationRoutes,
+      },
+    ],
   },
 ];
