@@ -1,0 +1,11 @@
+@for (menuItem of menuItems(); track menuItem.id) {
+<li class="relative px-6 py-3 first-of-type:mt-6">
+  <a
+    class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+    [routerLink]="menuItem.url"
+  >
+    <img class="w-[20px] h-[20px]" [src]="menuItem.icon" alt="" />
+    <span class="ml-4">{{ menuItem.name }}</span>
+  </a>
+</li>
+}

@@ -1,10 +1,11 @@
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { SideBarComponent } from '../side-bar/side-bar.component';
 
 @Component({
   selector: 'app-dashboard-layout',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NavbarComponent, SideBarComponent],
   templateUrl: './dashboard-layout.component.html',
   styles: `
 
