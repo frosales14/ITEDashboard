@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-cards-icon',
+  selector: 'app-station',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './cards-icon.component.html',
+  templateUrl: './station.component.html',
   styles: `
     :host {
       display: block;
@@ -13,6 +13,4 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CardsIconComponent {
-  class = input<string>();
-}
+export default class StationComponent {}
