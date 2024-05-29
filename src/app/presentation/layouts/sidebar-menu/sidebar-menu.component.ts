@@ -1,5 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { MenuItemComponent } from '../menu-item/menu-item.component';
 
 @Component({
@@ -12,49 +11,48 @@ import { MenuItemComponent } from '../menu-item/menu-item.component';
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidebarMenuComponent {
   menuItems = [
     {
       url: '',
-      icon: 'assets/svgs/chart.svg',
+      icon: 'monitoring',
       name: 'Dashboard',
       id: 1,
     },
     {
       url: '',
-      icon: 'assets/svgs/people.svg',
+      icon: 'group',
       name: 'Users',
       id: 2,
     },
     {
       url: '',
-      icon: 'assets/svgs/package.svg',
+      icon: 'shelves',
       name: 'Storage rooms',
       id: 3,
     },
     {
       url: '',
-      icon: 'assets/svgs/cards.svg',
+      icon: 'category',
       name: 'Categories',
       id: 4,
     },
     {
       url: '',
-      icon: 'assets/svgs/shoppingCart.svg',
+      icon: 'headset_mic',
       name: 'Products',
       id: 5,
     },
     {
       url: '',
-      icon: 'assets/svgs/shoppingCart.svg',
+      icon: 'inventory',
       name: 'Campaigns',
       id: 6,
     },
     {
       url: '',
-      icon: 'assets/svgs/marker.svg',
+      icon: 'universal_local',
       name: 'Stations',
       id: 7,
     },
